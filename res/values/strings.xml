@@ -10,5 +10,6 @@
     <string name="title_activity_display_info_utiles">Info utiles</string>
     <string name="title_activity_display_mes_cours_menu">Mes Cours</string>
     <string name="info">Le secrétariat (Bâtiment U - Porte B - 4ème niveau - local 159) de l Ecole polytechnique est accessible le lundi, mercredi, jeudi, vendredi de 9h à 12h et le mardi de 14h à 16h</string>
+    <string name="title_activity_display_main_activity">Université Libre de Bruxelles</string>
 
 </resources>
