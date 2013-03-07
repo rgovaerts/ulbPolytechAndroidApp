@@ -5,6 +5,11 @@
     android:gravity = "center" 
     tools:context=".MainActivity"
     android:background="#01478D" >
+    
+    <ImageView
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:src="@drawable/ulb_flammes_layer" />
 
     <TableLayout
     	android:id="@+id/tableLayout1"
