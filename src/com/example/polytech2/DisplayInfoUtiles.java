@@ -18,7 +18,12 @@ public class DisplayInfoUtiles extends Activity implements View.OnClickListener 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_info_utiles);
+		intialize();
 		
+	}
+
+	private void intialize() {
+		// TODO Auto-generated method stub
 		bWebmail = (Button) findViewById(R.id.bWebmail);
 		bUV = (ImageButton) findViewById(R.id.bUV);
 		bMonULB = (Button) findViewById(R.id.bMonULB);
@@ -40,21 +45,39 @@ public class DisplayInfoUtiles extends Activity implements View.OnClickListener 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		String inUrl= new String("http://www.google.com");
 		switch (v.getId()){
 		case R.id.bWebmail:
-			Intent browserCP = new Intent(Intent.ACTION_VIEW, Uri.parse("https://roundcube.ulb.ac.be/"));
-			startActivity(browserCP);
+			inUrl="http://webmail.ulb.ac.be/";
+			openWebURL(inUrl);
+			//Intent browserCP = new Intent(Intent.ACTION_VIEW, Uri.parse("https://roundcube.ulb.ac.be/"));
+			//startActivity(browserCP);
+			break;
 		case R.id.bUV:
-			Intent browserTD = new Intent(Intent.ACTION_VIEW, Uri.parse("http://webctapp.ulb.ac.be/webct/entryPageIns.dowebct"));
-			startActivity(browserTD);
+			inUrl="http://webctapp.ulb.ac.be/webct/entryPageIns.dowebct";
+			openWebURL(inUrl);
+			//Intent browserTD = new Intent(Intent.ACTION_VIEW, Uri.parse("http://webctapp.ulb.ac.be/webct/entryPageIns.dowebct"));
+			//startActivity(browserTD);
+			break;
 		case R.id.bMonULB:
-			Intent browserACE = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mon-ulb.ulb.ac.be/cp/home/displaylogin"));
-			startActivity(browserACE);
+			inUrl="https://mon-ulb.ulb.ac.be/cp/home/displaylogin";
+			openWebURL(inUrl);
+			//Intent browserACE = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mon-ulb.ulb.ac.be/cp/home/displaylogin"));
+			//startActivity(browserACE);
+			break;
 		case R.id.bBEP:
-			Intent browserBEP = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bepolytech.be/"));
-			startActivity(browserBEP);
+			inUrl="http://www.bepolytech.be/";
+			openWebURL(inUrl);
+			//Intent browserBEP = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bepolytech.be/"));
+			//startActivity(browserBEP);
+			break;
 		}
 		
+	}
+	public void openWebURL( String inURL ) {
+	    Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( inURL ) );
+	    startActivity( browse );
+	
 	}
 
 }

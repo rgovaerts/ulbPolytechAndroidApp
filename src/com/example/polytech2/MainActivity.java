@@ -43,29 +43,41 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	 
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
+			Intent a;
 			switch (v.getId()){
 			case R.id.bNews:
-				Intent a = new Intent (this, DisplayNewsMenu.class);
+				a = new Intent (this, DisplayNewsMenu.class);
 				startActivity(a);
 				break;
 			case R.id.bHoraire:
-				Intent b = new Intent (this, DisplayHoraireMenu.class);
-				startActivity(b);
+				a = new Intent (this, DisplayHoraireMenu.class);
+				startActivity(a);
+				//Intent b = new Intent (this, DisplayHoraireMenu.class);
+				//startActivity(b);
 				break;
 			case R.id.bPlan:
-				Intent c = new Intent (this, DisplayMapsMenu.class);
-				startActivity(c);
+				a = new Intent (this, DisplayMapsMenu.class);
+				startActivity(a);
+				break;
+				//Intent c = new Intent (this, DisplayMapsMenu.class);
+				//startActivity(c);
 			case R.id.bCours:
-				Intent d = new Intent (this, DisplayMesCoursMenu.class);
-				startActivity(d);
+				a = new Intent (this, DisplayMesCoursMenu.class);
+				startActivity(a);
+				//Intent d = new Intent (this, DisplayMesCoursMenu.class);
+				//startActivity(d);
 				break;
 			case R.id.bFolklore:
-				Intent e = new Intent (this, DisplayFolkloreMenu.class);
-				startActivity(e);
+				a = new Intent (this, DisplayFolkloreMenu.class);
+				startActivity(a);
+				//Intent e = new Intent (this, DisplayFolkloreMenu.class);
+				//startActivity(e);
 				break;
 			case R.id.bInfo:
-				Intent f = new Intent (this, DisplayInfoUtiles.class);
-				startActivity(f);
+				a = new Intent (this, DisplayInfoUtiles.class);
+				startActivity(a);
+				//Intent f = new Intent (this, DisplayInfoUtiles.class);
+				//startActivity(f);
 				break;
 			}
 		}

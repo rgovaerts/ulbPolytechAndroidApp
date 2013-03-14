@@ -33,12 +33,15 @@ public class DisplayFolkloreMenu extends Activity implements View.OnClickListene
 		case R.id.bCP:
 			Intent browserCP = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cerclepolytechnique.be/"));
 			startActivity(browserCP);
+			break;
 		case R.id.bTD:
 			Intent browserTD = new Intent(Intent.ACTION_VIEW, Uri.parse("http://ace-ulb.org/public/docs/Agenda_TDs_Fev-Mars_2013.pdf"));
 			startActivity(browserTD);
+			break;
 		case R.id.bACE:
 			Intent browserACE = new Intent(Intent.ACTION_VIEW, Uri.parse("http://ace-ulb.org/page/index"));
 			startActivity(browserACE);
+			break;
 		}
 	}
 
